@@ -6,7 +6,7 @@ const port = 8000;
 const posts = [];
 
 app.listen(port, () => {
-  console.log ("aaa"+ port);
+  console.log ("localhost:"+ port);
 })
 
 app.use(express.json());
