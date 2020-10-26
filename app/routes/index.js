@@ -1,5 +1,5 @@
-// const noteRoutes = require('./note_routes');
+const postRoutes = require('./post_routes');
 
-// module.exports = (app, db) => {
-//   noteRoutes(app, db);
-// }
+module.exports = (app, db) => {
+  postRoutes(app, db);
+}
