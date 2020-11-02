@@ -1,9 +1,10 @@
 const mongoose = require ('mongoose');
+require('dotenv').config();
 
-let db;
 
-mongoose.connect(process.env.MONGODB, {useNewUrlParser: true, useUnifiedTopology: true });
-db = mongoose.connection;
+mongoose.connect(process.env.DB_CONN, {useNewUrlParser: true, useUnifiedTopology: true });
+
+let db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function(){
