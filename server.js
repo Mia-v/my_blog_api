@@ -47,10 +47,10 @@ app.get('/posts', (_, res) => {
 });
 
 app.get("/posts/:id", (req, res) => { 
-  const { id } = req.params; 
+  const { _id } = req.params; 
  
 
-  Post.findOne({ postId : id }, (err, post) => {
+  Post.findOne({ id : _id }, (err, post) => {
     if(err){
       res.send({"error" : "An error has occured"})
     }else{
